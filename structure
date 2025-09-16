@@ -1,0 +1,17 @@
+Smart_Healthcare_Monitoring_System
+│── README.md
+│── hardware/
+│   ├── circuit_diagram.png
+│   ├── arduino_code.ino
+│   └── sensor_specs.pdf
+│── data/
+│   ├── health_data.csv
+│   └── processed_data.csv
+│── ml_model/
+│   ├── health_prediction.ipynb
+│   ├── model.pkl
+│   └── requirements.txt
+│── dashboard/
+│   ├── firebase_dashboard.md
+│   ├── screenshots/
+│   └── app_code/
