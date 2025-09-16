@@ -1,0 +1,6 @@
+temperature,humidity,heart_rate,condition
+36.5,45,72,Normal
+38.2,50,95,Fever
+37.0,48,120,High Heart Rate
+39.1,55,110,Fever
+36.8,47,75,Normal
