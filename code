@@ -1,0 +1,32 @@
+#include <DHT.h>
+
+#define DHTPIN 2       // DHT11 data pin
+#define DHTTYPE DHT11
+DHT dht(DHTPIN, DHTTYPE);
+
+int pulsePin = A0;     // Pulse sensor on Analog pin
+int pulseValue = 0;
+
+void setup() {
+  Serial.begin(9600);
+  dht.begin();
+}
+
+void loop() {
+  // Temperature & Humidity
+  float temp = dht.readTemperature();
+  float hum = dht.readHumidity();
+
+  // Heart Rate (dummy average)
+  pulseValue = analogRead(pulsePin);
+  int heartRate = map(pulseValue, 0, 1023, 60, 120);
+
+  // Print data
+  Serial.print("Temperature: "); Serial.print(temp);
+  Serial.print(" °C | Humidity: "); Serial.print(hum);
+  Serial.print(" % | Heart Rate: "); Serial.print(heartRate);
+  Serial.println(" bpm");
+
+  delay(2000);
+}
+
